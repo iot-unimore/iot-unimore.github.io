@@ -138,8 +138,12 @@ width: 12.5%;
 .authors {
     font-size: 26px;
 }
-.affiliatons {
-    font-size: 18px;
+.affiliations {
+    display: flex;           /* mette gli span in fila */
+    justify-content: center; /* centra la riga orizzontalmente */
+    gap: 40px;               /* spazio tra gli elementi */
+    flex-wrap: wrap;         /* va a capo se non c'è spazio */
+    margin: 20px 0;          /* margine sopra e sotto */
 }
 .affil-row {
     margin-top: 18px;
@@ -400,7 +404,11 @@ pre {
   line-height: 1;
 }
 
-
+.author-block {
+    display: flex;           /* allinea immagine e testo */
+    align-items: center;     /* centra verticalmente */
+    gap: 8px;                /* spazio tra immagine e testo */
+}
 
 
 
@@ -461,22 +469,28 @@ pre {
     <div id="authors">
         <center>
             <div class="author-row-new">
-                <a href="">Riccardo Catalini</a>,
-                <a href="">Davide Di Nucci</a>,
-                <a href="">Guido Borghi</a>,
-                <a href="">Davide Davoli</a>,
-                <a href="">Lorenzo Garattoni</a>,
-                <a href="">Gianpiero Francesca</a>,
-                <a href="https://www.linkedin.com/in/yuki-kawana-42b28526">Yuki Kawana</a>,
-                <a href="">Roberto Vezzani</a>
+                <a href="https://www.linkedin.com/in/riccardo-catalini-2572012b6/">Riccardo Catalini¹</a>,
+                <a href="https://www.linkedin.com/in/davide-di-nucci-540b13241/">Davide Di Nucci¹</a>,
+                <a href="https://www.linkedin.com/in/guido-borghi-97220972/">Guido Borghi¹</a>,
+                <a href="https://www.linkedin.com/in/davide-davoli/">Davide Davoli²</a>,
+                <a href="https://www.linkedin.com/in/lorenzo-garattoni/">Lorenzo Garattoni²</a>,
+                <a href="https://www.linkedin.com/in/gianpierofrancesca/">Gianpiero Francesca²</a>,
+                <a href="https://www.linkedin.com/in/yuki-kawana-42b28526">Yuki Kawana³</a>,
+                <a href="https://www.linkedin.com/in/roberto-vezzani-unimore">Roberto Vezzani¹</a>
             </div>
         </center>
         <center>
-        <div class="affiliations">
-            <span class="author-block"><a href="https://unimore.it/" style="vertical-align:left"><img style="width:30px" src=""></a> UNIMORE</span>
-            <span class="author-block"><a href="https://www.toyota-europe.com/" style="vertical-align:middle"><img style="width:30px" src=""></a> Toyota Motor Europe</span>
-            <span class="author-block"><a href="https://woven.toyota/" style="vertical-align:right"><img style="width:30px" src=""></a> Woven by Toyota</span>
-        </div>
+    <div class="affiliations">
+        <span class="author-block">
+            <a href="https://unimore.it/"><img style="width:30px" src=""></a>¹ UNIMORE
+        </span>
+        <span class="author-block">
+            <a href="https://www.toyota-europe.com/"><img style="width:30px" src=""></a>² Toyota Motor Europe
+        </span>
+        <span class="author-block">
+            <a href="https://woven.toyota/"><img style="width:30px" src=""></a>³ Woven by Toyota
+        </span>
+    </div>
 
 
 
@@ -496,8 +510,8 @@ pre {
     <section id="teaser-image">
         <center>
             <figure>
-                <video class="centered" width="100%" autoplay loop muted playsinline class="video-background " >
-                    <source src="img/teaser.mp4" type="video/mp4">
+                <video class="centered" width="70%" autoplay loop muted playsinline class="video-background " >
+                    <source src="img/gazed.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
 
